@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Linkedin, Globe, Search } from "lucide-react";
+import { Linkedin, Globe, Search, Cpu, MessageCircle } from "lucide-react";
 
 export default function JobSearch() {
   const [query, setQuery] = useState("");
@@ -52,7 +52,22 @@ export default function JobSearch() {
             <span className="text-sm font-medium">Dice</span>
           </CardContent>
         </Card>
+
+        <Card className="p-2 cursor-pointer hover:bg-gray-100" onClick={() => window.open(`https://www.aiconnect.com/jobs/search/?query=${query}`, "_blank") }>
+          <CardContent className="flex flex-col items-center">
+            <Cpu className="w-10 h-10 text-purple-500" />
+            <span className="text-sm font-medium">AI Connect</span>
+          </CardContent>
+        </Card>
+
+        <Card className="p-2 cursor-pointer hover:bg-gray-100" onClick={() => window.open(`https://chat.openai.com/?query=${query}+resume+search`, "_blank") }>
+          <CardContent className="flex flex-col items-center">
+            <MessageCircle className="w-10 h-10 text-blue-500" />
+            <span className="text-sm font-medium">ChatGPT Resume Search</span>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
 }
+
