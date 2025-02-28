@@ -1,4 +1,5 @@
 # Resume-Search-API
+**React-based Job Search API code that integrates with LinkedIn, Monster, and Dice sourcing.**
 This API has been created completely by ChatGPT. I have created this for future preference job posting website which I am planning to launch.
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
